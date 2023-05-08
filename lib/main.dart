@@ -1,3 +1,4 @@
+import 'package:bmicalculator/ui/screens/home.dart';
 import 'package:bmicalculator/ui/screens/result.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,16 @@ class _MyAppState extends State<MyApp> {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.teal
+        primarySwatch: Colors.teal,
+            canvasColor: Colors.black87,
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+        color: Colors.white,
+        fontSize: 25,
+        fontWeight: FontWeight.bold
+        ),
       ),
-      home: const ResultPage(),
-    );
+    ),
+        home: const ResultPage(age: 21,ismale: true,result: 155),);
   }
 }
