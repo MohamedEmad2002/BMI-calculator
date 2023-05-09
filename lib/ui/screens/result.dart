@@ -13,10 +13,10 @@ class ResultPage extends StatelessWidget {
     String resulttext='';
     if(result>=30) {
       resulttext='obese';
-    } else if(result>25&&result<30) {
-     resulttext='obese';
+    } else if(result>25&&result<40) {
+     resulttext='overWeight';
    }
-    if(result>=18.5&&result<=24.9) resulttext='obese';
+    if(result>=18.5&&result<=24.9) resulttext='Normal';
     return resulttext;
   }
   @override
@@ -30,8 +30,8 @@ class ResultPage extends StatelessWidget {
             Text("Gender: ${ismale?'male':'female'}",style:  Theme.of(context).textTheme.headline1),
             Text("Result: ${result.toStringAsFixed(1)}",style: Theme.of(context).textTheme.headline1,),
             Text("Healthness: $resultPhrase",style: Theme.of(context).textTheme.headline1,),
-            Text("Age: $age",style:  Theme.of(context).textTheme.headline1),],
-
+            Text("Age: $age",style:  Theme.of(context).textTheme.headline1),
+          ],
         ),
         ),
       );

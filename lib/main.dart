@@ -21,6 +21,9 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primarySwatch: Colors.teal,
             canvasColor: Colors.black87,
+        iconTheme: const IconThemeData(
+          color: Colors.white
+        ),
         textTheme: const TextTheme(
           headline1: TextStyle(
         color: Colors.white,
@@ -29,6 +32,6 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
     ),
-        home: const ResultPage(age: 21,ismale: true,result: 155),);
+        home: const HomePage());
   }
 }
